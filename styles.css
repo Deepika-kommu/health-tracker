@@ -1,0 +1,31 @@
+<body class="bg-gray-100 p-5">
+    <h1 class="text-3xl font-bold text-center text-blue-600">Health Challenge Tracker</h1>
+
+    <div class="flex justify-center space-x-2 my-4">
+        <input class="border p-2 rounded" type="text" id="userName" placeholder="Enter Username">
+        <select class="border p-2 rounded" id="workoutType">
+            <option value="Cardio">Cardio</option>
+            <option value="Strength">Strength</option>
+        </select>
+        <input class="border p-2 rounded" type="number" id="minutes" placeholder="Workout Minutes">
+        <button class="bg-blue-500 text-white px-4 py-2 rounded" onclick="addWorkout()">Add Workout</button>
+    </div>
+
+    <input class="border p-2 rounded w-1/3" type="text" id="searchName" onkeyup="searchByName()" placeholder="Search by Name">
+
+    <table class="table-auto w-1/2 mx-auto mt-5 bg-white shadow-lg rounded">
+        <thead>
+            <tr class="bg-blue-500 text-white">
+                <th class="p-2">User</th>
+                <th class="p-2">Workout Type</th>
+                <th class="p-2">Minutes</th>
+            </tr>
+        </thead>
+        <tbody id="workoutTable"></tbody>
+    </table>
+
+    <div class="w-1/2 mx-auto mt-8">
+        <h2 class="text-xl font-bold text-gray-700 text-center">Workout Progress Chart</h2>
+        <canvas id="workoutChart"></canvas>
+    </div>
+</body>

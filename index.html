@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Health Challenge Tracker</title>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="script.js" defer></script>
+        <link rel="stylesheet" href="styles.css">
+        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+    </head>
+<body>
+    <h1 class="text-4xl font-extrabold text-center text-blue-700 mt-5">HEALTH CHALLENGE TRACKER</h1>
+
+    <div>
+        <input type="text" id="userName" placeholder="Enter Username">
+        <select id="workoutType">
+            <option value="Cardio">Cardio</option>
+            <option value="Strength">Strength</option>
+        </select>
+        <input type="number" id="minutes" placeholder="Workout Minutes">
+        <button onclick="addWorkout()">Add Workout</button>
+    </div>
+
+    <input type="text" id="searchName" onkeyup="searchByName()" placeholder="Search by Name">
+    
+    <table>
+        <thead>
+            <tr>
+                <th>User</th>
+                <th>Workout Type</th>
+                <th>Minutes</th>
+            </tr>
+        </thead>
+        <tbody id="workoutTable"></tbody>
+    </table>
+
+    <script src="script.js"></script>
+    <h2>Workout Progress Chart</h2>
+<canvas id="workoutChart"></canvas>
+</body>
+</html>
